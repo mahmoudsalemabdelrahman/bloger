@@ -6,16 +6,22 @@
     src: url('../fonts/Tajawal-Regular.ttf') format("truetype"),
     local('Tajawal');
     }
-html{
-    direction:rtl;
+
+html, body{
+    direction: rtl;
     text-align: right;
-    }
+}
 
 body{
     font-family: 'Tajawal', 'sans-serf';
 }
-h1{
-    color: blue;
+.dropdown-menu .dropdown-item{
+    text-align: right;
 }
+
+h1{
+    color: cyan;
+}
+
 
     
