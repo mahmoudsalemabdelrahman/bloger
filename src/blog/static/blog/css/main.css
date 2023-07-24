@@ -1,8 +1,21 @@
+
+
+
 @font-face {
-    font-family: ('Tajawal');
-    src: url('../fonts/Tajawal-Regular.ttf') format("truetyp"),
+    font-family:'Tajawal';
+    src: url('../fonts/Tajawal-Regular.ttf') format("truetype"),
     local('Tajawal');
-}
+    }
+html{
+    direction:rtl;
+    text-align: right;
+    }
+
 body{
     font-family: 'Tajawal', 'sans-serf';
 }
+h1{
+    color: blue;
+}
+
+    
