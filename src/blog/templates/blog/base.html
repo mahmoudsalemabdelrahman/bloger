@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+    <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico'%}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+      <!-- start navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> 
+            <img src="{% static 'blog/images/mim-logo.png' %}" alt="شعار مدونه" width="30px">
+            مدونه </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"> الرئيسيه</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                دورات</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">دورة بايثون</a></li>
+                  <li><a class="dropdown-item" href="#">دورة جانجو</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">دورةhtml</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <li class="nav-item" style="list-style: none;">
+              <a class="nav-link" href="#">من أنا</a>
+            </li>
+    
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#">تسجيل الدخول</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">تسجيل</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- end navbar -->
+    </header>
+    <section>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-md-8">
+
+            {% block content %}
+            {% endblock content %}
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <h3 class="text-center bg-secondary text-light p-2">أخر التدوينات</h3>
+              <ul>
+                <li><a href="">التدوينه الاولي</a></li>
+                <li><a href="">التدوينه الثانيه</a></li>
+                <li><a href="">التدوينه الثالثه</a></li>
+                <li><a href="">التدوينه الرابعه</a></li>
+                <li><a href="">التدوينه الخامسه</a></li>
+
+              </ul>
+            </div>
+            <div class="card mb-3">
+              <h3 class="text-center bg-secondary text-light p-2">أخر التعليقات</h3>
+              <ul>
+                <li><a href="">التعليق الاول</a></li>
+                <li><a href="">التعليق الثاني</a></li>
+                <li><a href="">التعليق الثالث</a></li>
+                <li><a href="">التعليق الرابع</a></li>
+                <li><a href="">التعليق  الخامس</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-secondary">
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-md">
+          <div class="card-group mt-3">
+            <div class="card m-3">
+              <h3 class="card-title text-center border-bottom p-2 m-3">من أنا</h3>
+              <div class="card-body">
+                <div class="text-center">
+                <img src="{% static 'blog/images/mim-logo.png' %}" alt="شعار مدونه" width="100px">
+                </div>
+                من انا من انا
+                من انا من انا
+                من انا من انا
+                من انا من انا
+                من انا من انا
+                من انا من انا
+                من انا من انا    
+              </div>
+            </div>
+            <div class="card m-3">
+              <h3 class="card-title text-center border-bottom p-2 m-3"> مواقع هامه</h3>
+              <div class="card-body">
+                   <ul>
+                    <li><a href="#"> الموقع الاول</a></li>
+                    <li><a href="#"> الموقع الثاني</a></li>
+                    <li><a href="#"> الموقع الثالث</a></li>
+                    <li><a href="#"> الموقع الرابع</a></li>
+
+                   </ul>
+              </div>
+            </div>
+            <div class="card m-3">
+              <h3 class="card-title text-center border-bottom p-2 m-3"> وسائل التواصل الاجتماعي</h3>
+              <h4 class="card-body text-center">
+                <a class="text-secondary" href=""><i class="fab fa-facebook"></i> </a>
+                <a class="text-secondary"  href=""><i class="fab fa-twitter"></i> </a>
+                <a class="text-secondary"  href=""><i class="fab fa-instagram"></i> </a>
+                <a class="text-secondary"  href=""><i class="fab fa-telegram"></i> </a>
+                <a class="text-secondary"  href=""><i class="fab fa-youtube"></i> </a>
+                <a class="text-secondary"  href=""><i class="fab fa-linkedin"></i></a>
+                 
+
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row p-2">
+        <div class="col-md text-center">
+        <small class="text-light">&copy; جميع الحقوق محفوظه</small>
+
+        </div>
+      </div>
+    </footer>
+     
+    <script src="{% static 'blog/js/jquery-3.7.0.slim.min.js' %}"></script>
+    <script src="{% static 'blog/js/popper.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+
+</body>
+</html>

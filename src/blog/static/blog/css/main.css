@@ -19,8 +19,11 @@ body{
     text-align: right;
 }
 
-h1{
-    color: cyan;
+.bg-secondary{
+    background-color: #666 !important;
+}
+.bg-body-tertiary{
+    background-color: #ccc !important;
 }
 
 
