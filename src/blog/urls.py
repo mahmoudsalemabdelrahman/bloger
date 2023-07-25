@@ -6,5 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home' ),
     path('about/', views.about, name='about'),
+    path('detail/<int:post_id>/', views.post_detail, name='detail')
 ]#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

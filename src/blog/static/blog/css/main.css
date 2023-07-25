@@ -25,5 +25,25 @@ body{
 .bg-body-tertiary{
     background-color: #ccc !important;
 }
-
+/* start sidebar */
+.latest-post, .latest-comment{
+    padding: 0 15px;
+}
+.latest-post, .latest-post-item, .latest-comment, .latest-comment-item{
+    padding: 6px;
+}
+.latest-post-item li:first-child, .latest-comment-item li:first-child{
+    border-top: 0;
+}  
+.latest-post li:last-child, .latest-comment li:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}  
+/* end sidebar */
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
     

@@ -67,23 +67,16 @@
           <div class="col-md-4">
             <div class="card mb-3">
               <h3 class="text-center bg-secondary text-light p-2">أخر التدوينات</h3>
-              <ul>
-                <li><a href="">التدوينه الاولي</a></li>
-                <li><a href="">التدوينه الثانيه</a></li>
-                <li><a href="">التدوينه الثالثه</a></li>
-                <li><a href="">التدوينه الرابعه</a></li>
-                <li><a href="">التدوينه الخامسه</a></li>
-
-              </ul>
+                {% include 'blog/latest_posts.html' %}
             </div>
             <div class="card mb-3">
               <h3 class="text-center bg-secondary text-light p-2">أخر التعليقات</h3>
-              <ul>
-                <li><a href="">التعليق الاول</a></li>
-                <li><a href="">التعليق الثاني</a></li>
-                <li><a href="">التعليق الثالث</a></li>
-                <li><a href="">التعليق الرابع</a></li>
-                <li><a href="">التعليق  الخامس</a></li>
+              <ul class= "latest-comment">
+                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الاول</a></li>
+                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الثاني</a></li>
+                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الثالث</a></li>
+                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الرابع</a></li>
+                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق  الخامس</a></li>
 
               </ul>
             </div>
@@ -115,10 +108,10 @@
               <h3 class="card-title text-center border-bottom p-2 m-3"> مواقع هامه</h3>
               <div class="card-body">
                    <ul>
-                    <li><a href="#"> الموقع الاول</a></li>
-                    <li><a href="#"> الموقع الثاني</a></li>
-                    <li><a href="#"> الموقع الثالث</a></li>
-                    <li><a href="#"> الموقع الرابع</a></li>
+                    <li><a class = "text-secondary" href="#"> الموقع الاول</a></li>
+                    <li><a class = "text-secondary" href="#"> الموقع الثاني</a></li>
+                    <li><a class = "text-secondary" href="#"> الموقع الثالث</a></li>
+                    <li><a class = "text-secondary" href="#"> الموقع الرابع</a></li>
 
                    </ul>
               </div>

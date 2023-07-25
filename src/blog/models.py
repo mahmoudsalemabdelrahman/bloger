@@ -15,5 +15,18 @@ class Post(models.Model):
     
     class Meta:
         ordering = ('-post_date'),
-#python manage.py makemigrations
-#python manage.py migrate
+# python manage.py makemigrations
+# python manage.py migrate
+
+class Comment(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    body = models.TextField()
+    comment_date = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+
+
+
+    def __str__(self):
+        return self.name
