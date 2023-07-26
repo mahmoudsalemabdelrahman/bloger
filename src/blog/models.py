@@ -19,9 +19,9 @@ class Post(models.Model):
 # python manage.py migrate
 
 class Comment(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    body = models.TextField()
+    name = models.CharField(max_length=100, verbose_name='الأسم')
+    email = models.EmailField(verbose_name='البريد الاكتروني')
+    body = models.TextField(verbose_name='التعليق')
     comment_date = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
@@ -29,4 +29,7 @@ class Comment(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return  'علق {} علي {}.'.format(self.name,self.post)
+    
+    class Meta:
+        ordering = ('-comment_date'),

@@ -40,6 +40,12 @@ body{
     padding-bottom: 0;
 }  
 /* end sidebar */
+/* start comment */
+.comment {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+}
+/* end comment */
 a{
     text-decoration: none;
 }

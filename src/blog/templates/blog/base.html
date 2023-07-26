@@ -71,14 +71,7 @@
             </div>
             <div class="card mb-3">
               <h3 class="text-center bg-secondary text-light p-2">أخر التعليقات</h3>
-              <ul class= "latest-comment">
-                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الاول</a></li>
-                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الثاني</a></li>
-                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الثالث</a></li>
-                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق الرابع</a></li>
-                <li class ="latest-comment-item"><a class = "text-secondary" href="">التعليق  الخامس</a></li>
-
-              </ul>
+              {% include 'blog/latest_comments.html' %}
             </div>
           </div>
         </div>
