@@ -47,13 +47,23 @@
               <a class="nav-link" href="{% url 'about' %}">من أنا</a>
             </li>
     
+
+            {% if user.is_authenticated %}
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             
-              <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">تسجيل الدخول</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">تدوينه جديدة</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">الملف الشخصي</a></li>
               <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"> تسجيل خروخ</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">تسجيل</a></li>
 
             </ul>
+
+            {% else %}
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">تسجيل الدخول</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">تسجيل</a></li>
+            </ul>
+
+            {% endif %}
+          
           </div>
         </div>
       </nav>

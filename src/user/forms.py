@@ -26,3 +26,9 @@ class UserCreationForms(forms.ModelForm):
         if User.objects.filter(username=cd['username']).exists():
             raise forms.ValidationError('يوجد مستخم مسجل بهذا الاسم')
         return cd['username']
+class LoginForm(forms.ModelForm):
+    username = forms.CharField(label='تسجيل الدخول')
+    password = forms.CharField( label='كلمه السر ',widget=forms.PasswordInput())
+    class Meta:
+        model = User
+        fields = ('username', 'password')
